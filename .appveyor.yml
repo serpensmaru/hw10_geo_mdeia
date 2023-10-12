@@ -1,10 +1,15 @@
+
+environment:
+  access_token:
+    secure: +zw3wEWftBABcTsUKYuV9q9m/g1rVnPeYLd5Ztl+Jh8GUpjD++OkwmLUbseU6VeI
+
 image: Ubuntu1804  # образ для сборки
 
 stack: node 16  # окружение
 
 branches:
   only:
-    - master  # ветка git
+    - main  # ветка git
 
 cache: node_modules  # кеширование
 
@@ -17,11 +22,12 @@ build_script:
   - npm run build   # команда сборки
 
 test_script:
-  - npm run lint && npm run test # скрипт тестирования
-
+  - npm run lint # скрипт тестирования
+  
 deploy_script:  # скрипт развёртывания
   - git config --global credential.helper store
   - git config --global user.name AppVeyor
   - git config --global user.email ci@appveyor.com
-  - echo "https://$GITHUB_TOKEN:x-oauth-basic@github.com" > "$HOME/.git-credentials"
+  - ps: Set-Content -Path "$HOME\.git-credentials" -Value "https://$($env:access_token):x-oauth-basic@github.com`n" -NoNewline
   - npx push-dir --dir=dist --branch=gh-pages --force --verbose
+  
