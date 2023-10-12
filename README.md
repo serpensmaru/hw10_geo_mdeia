@@ -1,8 +1,8 @@
 # Домашнее задание к занятию "10. Geolocation, Notification, Media"
 
 ###  Geo + Noti + Media
-**CI** [![Build status](https://ci.appveyor.com/api/projects/status/p392eqdicer31bvq/branch/main?svg=true)](https://ci.appveyor.com/project/serpensmaru/hw9-anime/branch/main)
-### [Deploy - gh_pages](https://serpensmaru.github.io/hw9_anime/)
+**CI** [![Build status](https://ci.appveyor.com/api/projects/status/8gckm001w3201iq9/branch/main?svg=true)](https://ci.appveyor.com/project/serpensmaru/hw10-geo-mdeia/branch/main)
+### [Deploy - gh_pages](https://serpensmaru.github.io/hw10_geo_mdeia/)
 
 **Важно**: в рамках этого задания вы будете разрабатывать **один проект**, в который добавляется новая функциональность. Поэтому все три задачи нужно делать в одном репозитории (не забудьте опубликовать проект на GitHub Pages).
 
